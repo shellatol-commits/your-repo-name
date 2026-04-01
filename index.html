@@ -3,65 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pong Game</title>
+    <title>My Projects</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        canvas {
-            border: 1px solid white;
-        }
-        #score {
-            font-size: 2em;
-            margin: 20px;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        header { background: #35424a; padding: 10px 0; text-align: center; color: #ffffff; }
+        nav { margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #35424a; }
+        .container { max-width: 800px; margin: auto; background: #ffffff; padding: 20px; border-radius: 5px; }
+        h1 { color: #35424a; }
+        footer { text-align: center; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>Pong Game</h1>
-    <canvas id="pongCanvas" width="800" height="400"></canvas>
-    <div id="score">
-        Player 1: <span id="player1Score">0</span> | Player 2: <span id="player2Score">0</span>
+    <header>
+        <h1>Welcome to My Projects</h1>
+    </header>
+    <nav>
+        <a href="/calculator">Calculator</a>
+        <a href="/pong">Pong Game</a>
+        <a href="/joke-generator">Joke Generator</a>
+    </nav>
+    <div class="container">
+        <h2>Explore My Projects</h2>
+        <p>This is a collection of my projects. Click the links above to visit each project.</p>
     </div>
-    <div>
-        <h3>Controls:</h3>
-        <p>Player 1: W (up), S (down)</p>
-        <p>Player 2: Up Arrow (up), Down Arrow (down)</p>
-    </div>
-    <script>
-        const canvas = document.getElementById('pongCanvas');
-        const context = canvas.getContext('2d');
-
-        // Game variables and setup code would go here
-        let player1Score = 0;
-        let player2Score = 0;
-
-        function draw() {
-            // Game drawing logic would go here
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.fillStyle = 'white';
-            context.fillRect(canvas.width / 2 - 1, 0, 2, canvas.height);
-            // Additional drawing functions
-        }
-
-        function update() {
-            // Game update logic would go here
-        }
-
-        function gameLoop() {
-            draw();
-            update();
-            requestAnimationFrame(gameLoop);
-        }
-
-        gameLoop();
-    </script>
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
 </body>
 </html>
